@@ -50,7 +50,7 @@ def load_result():
     with open("main.zip", "rb") as f:
         main_bytes = f.read()
     
-    # remove("main.zip")
+    remove("main.zip")
     
     base64_bytes = base64.b64encode(main_bytes)
     base64_main = base64_bytes.decode('ascii')
