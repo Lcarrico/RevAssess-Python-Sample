@@ -34,7 +34,7 @@ def finish():
     
     # End logic goes at the end of all sessions
     data = load_result()
-    requests.put(data['config']['serverLocation'])
+    requests.put(data['config']['serverLocation'], json=data)
 
 
 def load_result():
