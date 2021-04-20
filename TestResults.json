@@ -1,1 +1,0 @@
-[{"testName": "test_add", "points": 10, "isSuccessful": true, "errorMessage": "SUCCESS", "tier": 0}, {"testName": "test_subtract", "points": 10, "isSuccessful": false, "errorMessage": "assert 0 == 2\n +  where 0 = subtract(5, 3)", "tier": 0}]
