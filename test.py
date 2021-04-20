@@ -1,6 +1,6 @@
 import pytest
 from main import *
-from util import RevaTest
+from util import *
 
 
 @RevaTest(points=10, tier=0)

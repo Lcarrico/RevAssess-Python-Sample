@@ -36,7 +36,6 @@ def finish():
     data = load_result()
     requests.put(data['config']['serverLocation'], json=data)
 
-
 def load_result():
     data = {}
     with open("TestResults.json") as f:
@@ -79,6 +78,16 @@ def add_to_json(testName, points, isSuccessful, errorMessage, tier):
     temp['errorMessage'] = errorMessage
     temp['tier'] = tier
 
-    data.append(temp)
+    index = -1
+    for i in range(len(data)):
+        if data[i]['testName'] == temp['testName']:
+            index = i
+            break
+    
+    if index == -1:
+        data.append(temp)
+    else:
+        data[i] = temp
+
     with open(filename, 'w') as outfile:
         json.dump(data, outfile)
